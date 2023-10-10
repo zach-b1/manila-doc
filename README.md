@@ -12,8 +12,10 @@ openstack image create "manila-service-image" \
 ```
 
 ### Flavor
+
+Ram min 512-1024 Ubuntu Image
 ```
-openstack flavor create manila-service-flavor --id 100 --ram 128 --disk 0 --vcpus 1
+openstack flavor create manila-service-flavor --id 100 --ram 1024 --disk 0 --vcpus 1
 ```
 
 ### share Network
