@@ -25,9 +25,9 @@ openstack share network create --neutron-net-id 56eb6ad3-5651-4ada-ae8e-82d82979
 
 
 ### share type
+Only dhss is possible by kolla-ansible manila generic
 ```
-openstack --os-cloud admin share type create disable_dhss false
-openstack --os-cloud admin share type create enable_dhss true
+openstack --os-cloud admin share type create default true 
 ```
 
 
@@ -38,5 +38,5 @@ openstack --os-cloud admin share type create enable_dhss true
 ## Create Share
 
 ```
-openstack share create nfs 1 --share-type enable_dhss --share-network share-network --name share
+openstack share create nfs 1 --share-type default --share-network share-network --name share
 ```
